@@ -1,5 +1,3 @@
-console.log('Hi!');
-
 showImage(0);
 
 function currentSlide(index) {
@@ -7,11 +5,18 @@ function currentSlide(index) {
 }
 
 function showImage(index) {
-  console.log(index);
-	const images = document.querySelectorAll('.image'); // NodeList
+  const images = document.querySelectorAll('.image');
+  const dots = document.querySelectorAll('.dot');
 
-	images.forEach( (each, i) => { //forEach available
-    if(i === index) each.style.display="block";
-    if(i !== index) each.style.display="none";
+  images.forEach( (image, i) => {
+    console.log(image);
+    if(i === index) image.classList.add('active');
+    if(i !== index) image.classList.remove('active');
   });
+
+  dots.forEach( (dot, i) => {
+    if(i === index) dot.classList.add('active');
+    if(i !== index) dot.classList.remove('active');
+  });
+
 }

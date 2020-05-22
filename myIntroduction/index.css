@@ -75,7 +75,13 @@ body, html {
 .slider-container .image {
   width: 100%;
   height: 100vh;
-  display: none;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.slider-container .image.active {
+  opacity: 1;
 }
 
 .dot-container {
@@ -94,7 +100,7 @@ body, html {
   border-radius: 50%;
 }
 
-.dot-container .dot:hover {
+.dot.active, .dot:hover {
   background-color: #eca1a6;
 }
 
