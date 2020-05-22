@@ -8,10 +8,9 @@ function currentSlide(index) {
 
 function showImage(index) {
   console.log(index);
-  const images = document.querySelectorAll('.image');
-  const imageArray = Array.from(images);
+	const images = document.querySelectorAll('.image'); // NodeList
 
-  imageArray.forEach( (each, i) => {
+	images.forEach( (each, i) => { //forEach available
     if(i === index) each.style.display="block";
     if(i !== index) each.style.display="none";
   });
