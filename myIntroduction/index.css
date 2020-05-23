@@ -20,11 +20,10 @@ body, html {
   background-repeat: no-repeat;
   background-size: cover;
 
-  border-bottom: 1px solid red;
 }
 
 .header .name {
-  padding: 100px;
+  padding: 130px;
   font-size: 80px;
   font-weight: bolder;
 }
@@ -62,7 +61,15 @@ body, html {
 
 .intro {
   height: 100vh;
-  border-bottom: 1px solid olive;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.intro .text {
+  font-size: 80px;
+  font-weight: bolder;
 }
 
 
@@ -110,5 +117,16 @@ body, html {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid orange;
+  flex-direction: column-reverse;
+
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+  font-size: 40px;
+}
+
+.footer a:hover {
+  color: #eca1a6;
 }
