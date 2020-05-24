@@ -69,6 +69,7 @@ body, html {
 
 .intro .text {
   font-size: 80px;
+  margin-top: 15px;
   font-weight: bolder;
 }
 
@@ -125,8 +126,20 @@ body, html {
   color: white;
   text-decoration: none;
   font-size: 40px;
+  font-weight: bold;
 }
 
 .footer a:hover {
   color: #eca1a6;
+}
+
+.observed { 
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.observed.active {
+  opacity: 1;
+  transform: translateX(0);
 }
